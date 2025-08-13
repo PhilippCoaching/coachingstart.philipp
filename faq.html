@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FAQ – Häufige Fragen | Coach Philipp</title>
+ <link rel="stylesheet" href="css/style.css" />
+
+</head>
+<body>
+  <header>
+    <img src="img/mein-logo.png" alt="Coach Philipp Logo" class="logo" />
+  </header>
+
+  <main>
+    <section id="faq">
+      <h2>Häufige Fragen (FAQ)</h2>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" aria-controls="answer1" id="question1">
+          Für wen sind die Trainingspläne geeignet?
+        </button>
+        <div class="faq-answer" id="answer1" role="region" aria-labelledby="question1">
+          <p>Die Trainingspläne richten sich speziell an Anfänger oder Wiedereinsteiger im Fitnessbereich. Du brauchst keine Vorkenntnisse – ich nehme dich Schritt für Schritt mit!</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" aria-controls="answer2" id="question2">
+          Brauche ich ein Fitnessstudio?
+        </button>
+        <div class="faq-answer" id="answer2" role="region" aria-labelledby="question2">
+          <p>Nein! Du bekommst auf Wunsch auch Pläne für das Training zu Hause – komplett ohne Geräte oder nur mit Körpergewicht und leichten Hilfsmitteln wie Widerstandsbändern.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" aria-controls="answer3" id="question3">
+          Wie funktioniert die Bestellung?
+        </button>
+        <div class="faq-answer" id="answer3" role="region" aria-labelledby="question3">
+          <p>Du wählst einfach deinen gewünschten Trainingsplan aus und erhältst ihn nach Zahlungseingang direkt per E-Mail. Bei individuellen Anfragen melde dich gerne bei Instagram bei mir.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" aria-controls="answer4" id="question4">
+          Welche Zahlungsmethoden bietest du an?
+        </button>
+        <div class="faq-answer" id="answer4" role="region" aria-labelledby="question4">
+          <p>Aktuell habe ich nur PayPal implementiert. Dort kannst du aber auch zahlen, ohne ein eigenes Konto zu haben.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" aria-controls="answer4" id="question4">
+          Kann ich individuelle Trainingspläne bekommen?
+        </button>
+        <div class="faq-answer" id="answer4" role="region" aria-labelledby="question4">
+          <p>Ja! Schreib mir einfach eine Nachricht bei Instagram – ich gehe gerne auf deine Ziele, deinen Zeitplan und deine Wünsche ein.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" aria-controls="answer5" id="question5">
+          Wie oft sollte ich mit dem Plan trainieren?
+        </button>
+        <div class="faq-answer" id="answer5" role="region" aria-labelledby="question5">
+          <p>Das kommt ganz auf deine Ziele und deine Zeit an. In der Regel empfehle ich 3–4 Trainingseinheiten pro Woche, was für Anfänger ideal ist.</p>
+        </div>
+      </div>
+
+    <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" aria-controls="answer4" id="question4">
+          Ich bin nicht sicher im Thema Ernährung. Kannst du mir dabei auch helfen?
+        </button>
+        <div class="faq-answer" id="answer4" role="region" aria-labelledby="question4">
+          <p>Ja! Schreib mir einfach eine Nachricht bei Instagram – einige grundlegende Tipps kann ich dir auf jeden Fall geben. Für einen konkreten Ernährungsplan musst du noch etwas warten. Ich arbeite aber an der Umsetzung.</p>
+        </div>
+
+    <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" aria-controls="answer4" id="question4">
+          Bekomme ich eine Rechnung, wenn ich etwas gekauft habe?
+        </button>
+        <div class="faq-answer" id="answer4" role="region" aria-labelledby="question4">
+          <p>Natürlich, wenn du eine Rechnung benötigst, dann schreibe ich dir gerne eine Rechnung. Kontaktiere mich dazu einfach via Instagram.</p>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <div style="margin-bottom: 0.5rem; text-align:center;">
+      &copy; 2025 Coach Philipp – Alle Rechte vorbehalten
+    </div>
+  </footer>
+
+ <!-- FAQ JS für das Aufklappen -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const items = document.querySelectorAll('.faq-item');
+
+    items.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      question.addEventListener('click', () => {
+        item.classList.toggle('active');
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

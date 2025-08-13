@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Trainingsplan Grundübungen – Coach Philipp</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<h1>Trainingsplan Grundübungen</h1>
+
+<p>Dieser Trainingsplan ist ideal für Einsteiger, die ihre Fitness verbessern und langsam in ein regelmäßiges Krafttraining starten möchten. Die Übungen decken die Kraftgrundübungen ab und bauen eine starke und umfassende Muskulatur auf.</p>
+
+<p>Geeignet für: Personen, die neu im Krafttraining sind oder nach längerer Pause wieder starten möchten.</p>
+
+<section class="trainingsplan-auszug">
+  <h2>Coach Philipp – Dein Start in ein fitteres Leben</h2>
+  <h3>Tag 2: Ganzkörpertraining B</h3>
+
+  <ol class="uebungen-liste">
+    <li>
+      <strong>Kreuzheben (Deadlifts)</strong>
+      <p><em>Ziel:</em> Rücken, Beine, Po, Rumpf</p>
+      <p><em>Ausführung:</em> Hantelstange nah am Körper, Rücken gerade halten, Hüfte nach hinten schieben, mit den Beinen hochdrücken.</p>
+    </li>
+
+    <li>
+      <strong>Rudern am Kabelzug oder mit Kurzhanteln</strong>
+      <p><em>Ziel:</em> Rücken (Rhomboide, Lat), Bizeps</p>
+      <p><em>Ausführung:</em> Oberkörper leicht nach vorne, Stange oder Hantel zum Bauch ziehen, kontrolliert absenken.</p>
+    </li>
+
+    <li>
+      <strong>Schrägbankdrücken (Kurzhantel oder Maschine)</strong>
+      <p><em>Ziel:</em> obere Brust, Schultern</p>
+      <p><em>Ausführung:</em> Bank ca. 30-45° geneigt, Hanteln vom Brustkorb nach oben drücken.</p>
+    </li>
+
+    <li>
+      <strong>Beinpresse</strong>
+      <p><em>Ziel:</em> Beine, Po</p>
+      <p><em>Ausführung:</em> Füße schulterbreit auf der Plattform, kontrolliert drücken und langsam ablassen.</p>
+    </li>
+
+    <li>
+      <strong>Seitliche Schulterheben (Kurzhantel)</strong>
+      <p><em>Ziel:</em> Schultern (seitlicher Deltamuskel)</p>
+      <p><em>Ausführung:</em> Arme seitlich hochheben bis auf Schulterhöhe, kontrolliert absenken.</p>
+    </li>
+
+    <li>
+      <strong>Crunches</strong>
+      <p><em>Ziel:</em> obere Bauchmuskeln</p>
+      <p><em>Ausführung:</em> Rücken am Boden, Oberkörper leicht anheben, Bauch anspannen.</p>
+    </li>
+  </ol>
+</section>
+
+
+<!-- Kaufbereich -->
+<form id="purchaseForm" action="https://www.paypal.me/PhilippGanz/4.99" method="get" target="_blank" onsubmit="return validateForm()">
+
+  <label for="agbCheckbox">
+    <input type="checkbox" id="agbCheckbox" />
+    Ich akzeptiere die <a href="agb.html" target="_blank" rel="noopener noreferrer">AGB</a> und die <a href="widerrufsbelehrung.html" target="_blank" rel="noopener noreferrer">Widerrufsbelehrung</a>.
+  </label>
+
+  <button type="submit" id="buyButton" disabled>Kaufen für 4,99€</button>
+
+</form>
+
+<script>
+  const checkbox = document.getElementById('agbCheckbox');
+  const buyButton = document.getElementById('buyButton');
+
+  checkbox.addEventListener('change', function () {
+    if (this.checked) {
+      buyButton.disabled = false;
+      buyButton.classList.add('enabled');
+    } else {
+      buyButton.disabled = true;
+      buyButton.classList.remove('enabled');
+    }
+  });
+
+  function validateForm() {
+    if (!checkbox.checked) {
+      alert('Bitte akzeptiere die AGB und Widerrufsbelehrung, um fortzufahren.');
+      return false;
+    }
+    return true;
+  }
+</script>
+
+</body>
+</html>

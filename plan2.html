@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bodyweight Trainingsplan – Coach Philipp</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<h1>Bodyweight Trainingsplan</h1>
+
+<p>Dieser Trainingsplan konzentriert sich auf Übungen mit dem eigenen Körpergewicht, ideal für flexibles Training ohne Geräte.</p>
+
+<p>Geeignet für: Alle, die ohne Equipment effektiv trainieren möchten, egal ob zuhause oder unterwegs.</p>
+
+<section class="trainingsplan-auszug">
+  <h2>Coach Philipp – Dein Weg in ein fitteres Leben</h2>
+  <h3>Basic-Übungen (Einsteiger)</h3>
+  <ol class="uebungen-liste">
+    <li>
+      <strong>Wandliegestütze</strong>
+      <p>Hände an Wand, Körper gerade, Arme beugen und strecken</p>
+      <p><em>3 x 12</em></p>
+    </li>
+    <li>
+      <strong>Kniebeugen</strong>
+      <p>Füße schulterbreit, Po nach hinten, tief in die Hocke</p>
+      <p><em>3 x 15</em></p>
+    </li>
+    <li>
+      <strong>Glute Bridge</strong>
+      <p>Rückenlage, Füße aufstellen, Po anheben</p>
+      <p><em>3 x 15</em></p>
+    </li>
+    <li>
+      <strong>Unterarmstütz (Plank)</strong>
+      <p>Auf Unterarmen und Füßen, Körper gerade halten</p>
+      <p><em>3 x 20–30 Sekunden</em></p>
+    </li>
+    <li>
+      <strong>Beinheben seitlich</strong>
+      <p>Seitlich liegend, Bein langsam heben und senken</p>
+      <p><em>3 x 12 pro Seite</em></p>
+    </li>
+    <li>
+      <strong>Sitzendes Marschieren</strong>
+      <p>Im Sitzen abwechselnd Beine heben</p>
+      <p><em>3 x 1 Minute</em></p>
+    </li>
+  </ol>
+</section>
+
+<!-- Restliches HTML (Kaufbereich, Skripte etc.) -->
+
+<form id="purchaseForm" action="https://www.paypal.me/PhilippGanz/4.99" method="get" target="_blank" onsubmit="return validateForm()" style="max-width: 900px; margin: 20px auto; padding: 0 20px;">
+  <label for="agbCheckbox" style="display: block; margin-bottom: 12px; color: #ddd; font-weight: 600;">
+    <input type="checkbox" id="agbCheckbox" />
+    Ich akzeptiere die <a href="agb.html" target="_blank" rel="noopener noreferrer" style="color: #28a745;">AGB</a> und die <a href="widerrufsbelehrung.html" target="_blank" rel="noopener noreferrer" style="color: #28a745;">Widerrufsbelehrung</a>.
+  </label>
+
+  <button type="submit" id="buyButton" disabled style="background-color:#28a745; color:black; font-weight:700; padding:12px 32px; border:none; border-radius:20px; cursor:pointer; font-size:1rem; transition: background-color 0.25s ease, color 0.25s ease; box-shadow: 0 6px 12px rgba(0,0,0,0.35); user-select:none; text-decoration:none;">
+    Kaufen für 4,99€
+  </button>
+</form>
+
+<script>
+  const checkbox = document.getElementById('agbCheckbox');
+  const buyButton = document.getElementById('buyButton');
+
+  checkbox.addEventListener('change', function () {
+    if (this.checked) {
+      buyButton.disabled = false;
+      buyButton.style.backgroundColor = '#1e7e34';
+      buyButton.style.color = 'white';
+    } else {
+      buyButton.disabled = true;
+      buyButton.style.backgroundColor = '#28a745';
+      buyButton.style.color = 'black';
+    }
+  });
+
+  function validateForm() {
+    if (!checkbox.checked) {
+      alert('Bitte akzeptiere die AGB und Widerrufsbelehrung, um fortzufahren.');
+      return false;
+    }
+    return true;
+  }
+</script>
+
+</body>
+</html>

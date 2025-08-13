@@ -1,0 +1,410 @@
+/* Grunddesign - dunkel mit grünem Akzent */
+body {
+  background: linear-gradient(135deg, #121212 0%, #1b381b 100%);
+  color: #ddd;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+
+a {
+  color: #28a745;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  color: #1e7e34;
+  text-decoration: underline;
+}
+
+/* Buttons allgemein: grün, kleinere Schrift, runde Ecken */
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+a.btn, a.plan-btn {
+  background-color: #28a745;
+  color: black;
+  font-weight: 700;
+  padding: 12px 32px;
+  margin: 15px 20px 15px 0;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-align: center;
+  display: inline-block;
+  transition: background-color 0.25s ease, color 0.25s ease;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.35);
+  user-select: none;
+  text-decoration: none;
+}
+
+button:hover,
+button:focus,
+input[type="button"]:hover,
+input[type="button"]:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus,
+input[type="reset"]:hover,
+input[type="reset"]:focus,
+a.btn:hover,
+a.btn:focus,
+a.plan-btn:hover,
+a.plan-btn:focus {
+  background-color: #1e7e34;
+  color: white;
+  outline: none;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+}
+
+/* Zurück-Buttons: kleiner, gleiches Design */
+button.back-btn,
+a.back-btn {
+  background-color: #28a745;
+  color: black;
+  font-weight: 700;
+  padding: 12px 30px;
+  margin: 15px 15px 30px 0;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  text-align: center;
+  display: inline-block;
+  transition: background-color 0.25s ease, color 0.25s ease;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+  user-select: none;
+  text-decoration: none;
+}
+
+button.back-btn:hover,
+button.back-btn:focus,
+a.back-btn:hover,
+a.back-btn:focus {
+  background-color: #1e7e34;
+  color: white;
+  outline: none;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+/* Footer */
+footer {
+  background-color: #1a1a1a;
+  color: #bbb;
+  text-align: center;
+  padding: 20px 10px;
+  border-top: 2px solid #28a745;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #28a745;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #1e7e34;
+  text-decoration: underline;
+}
+
+/* Instagram Icon in Footer */
+footer a.insta-link svg {
+  width: 20px;
+  height: 20px;
+  fill: white; /* weiß */
+  vertical-align: middle;
+  transition: fill 0.25s ease;
+}
+
+footer a.insta-link:hover svg,
+footer a.insta-link:focus svg {
+  fill: #28a745; /* grün bei hover */
+}
+
+/* Header & Logo */
+header {
+  display: flex;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #1a1a1a;
+  border-bottom: 2px solid #28a745;
+  flex-wrap: wrap;
+}
+
+header img.logo {
+  height: 45px; /* Logo Größe */
+  margin-right: 20px;
+}
+
+header h1 {
+  color: #28a745;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+  flex-grow: 1;
+}
+
+/* Hauptbereich */
+main {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Qualifikationen – B-Lizenz mittig */
+.qualification {
+  text-align: center;
+  margin: 20px auto;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header img.logo {
+    height: 20px;
+    margin-bottom: 10px;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  main {
+    margin: 20px 10px;
+    padding: 0 10px;
+  }
+
+  button,
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"],
+  a.btn, a.plan-btn {
+    padding: 10px 28px;
+    font-size: 0.9rem;
+    margin: 12px 12px 12px 0;
+  }
+
+  button.back-btn,
+  a.back-btn {
+    padding: 10px 25px;
+    font-size: 1rem;
+    margin: 10px 10px 20px 0;
+  }
+
+  footer a.insta-link svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* FAQ-Bereich */
+#faq {
+  background-color: #111;
+  color: #eee;
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 12px;
+}
+
+/* Stil der Fragen-Buttons */
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background-color: #222;
+  color: #eee;
+  border: none;
+  padding: 14px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background-color 0.3s;
+}
+
+.faq-question:hover {
+  background-color: #28a745;
+  color: #fff;
+}
+
+/* Antwortfeld standardmäßig versteckt */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
+  background-color: #1b1b1b;
+  padding: 0 20px;
+  border-left: 3px solid #28a745;
+  border-radius: 0 0 8px 8px;
+}
+
+/* Sichtbar machen, wenn .active */
+.faq-item.active .faq-answer {
+  max-height: 300px; /* reicht für kurze Antworten */
+  opacity: 1;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+}
+
+/* Optional: glatte Übergänge */
+.faq-item {
+  margin-bottom: 10px;
+}
+
+/* Trainingsplan-Auszug einheitlich gestalten wie Plan1 */
+.trainingsplan-auszug {
+  background-color: #1e1e1e;
+  color: #ddd;
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+.trainingsplan-auszug h2 {
+  color: #28a745;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.trainingsplan-auszug h3 {
+  color: #9ccc65;
+  font-size: 1.4rem;
+  margin-bottom: 30px;
+  font-weight: 600;
+  text-align: center;
+  font-style: italic;
+}
+
+.trainingsplan-auszug ol.uebungen-liste {
+  counter-reset: item;
+  list-style: none;
+  padding-left: 0;
+}
+
+.trainingsplan-auszug ol.uebungen-liste li {
+  background-color: #282828;
+  margin-bottom: 20px;
+  padding: 20px 25px;
+  border-radius: 8px;
+  box-shadow: inset 0 0 8px rgba(40, 40, 40, 0.8);
+  position: relative;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #ddd;
+  transition: background-color 0.3s ease;
+}
+
+.trainingsplan-auszug ol.uebungen-liste li:hover {
+  background-color: #333;
+}
+
+.trainingsplan-auszug ol.uebungen-liste li strong {
+  display: block;
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+  color: #a4d65e;
+  font-weight: 700;
+}
+
+.trainingsplan-auszug ol.uebungen-liste li p {
+  margin: 4px 0;
+  color: #ccc;
+}
+
+.trainingsplan-auszug ol.uebungen-liste li p em {
+  color: #8dbf42;
+  font-style: normal;
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+.trainingsplan-auszug ol.uebungen-liste li::before {
+  counter-increment: item;
+  content: counter(item);
+  position: absolute;
+  left: -45px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #28a745;
+  color: #121212;
+  font-weight: 700;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  box-shadow: 0 0 6px #28a745;
+  font-size: 1.2rem;
+  user-select: none;
+}
+/* Weitere Responsive-Anpassungen für kleine Geräte */
+@media (max-width: 600px) {
+  .trainingsplan-auszug {
+    padding: 20px;
+    margin: 20px 10px;
+  }
+
+  .trainingsplan-auszug h2 {
+    font-size: 1.6rem;
+  }
+
+  .trainingsplan-auszug h3 {
+    font-size: 1.2rem;
+  }
+
+  .trainingsplan-auszug ol.uebungen-liste li {
+    padding: 18px 20px;
+    font-size: 0.95rem;
+  }
+
+  .trainingsplan-auszug ol.uebungen-liste li strong {
+    font-size: 1rem;
+  }
+
+  .trainingsplan-auszug ol.uebungen-liste li::before {
+    left: -35px;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 1rem;
+  }
+
+  form#purchaseForm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  #purchaseForm label {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  #purchaseForm a {
+    display: inline-block;
+    word-break: break-word;
+  }
+
+  #buyButton {
+    width: 100%;
+    text-align: center;
+  }
+}

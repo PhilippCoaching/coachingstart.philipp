@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rollstuhlfahrertraining – Coach Philipp</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<h1>Rollstuhlfahrertraining</h1>
+
+<p>Speziell abgestimmter Trainingsplan für Rollstuhlfahrer, der die Muskulatur stärkt und die Mobilität fördert.</p>
+
+<p>Geeignet für: Rollstuhlfahrer, die ihr Krafttraining effektiv und sicher gestalten möchten.</p>
+
+<section class="trainingsplan-auszug">
+  <h2>Coach Philipp</h2>
+  <h3>Rollstuhl-Krafttraining </h3>
+
+  <p><strong>Zielgruppe:</strong> Oberkörperkräftigung mit Fokus auf Arme, Schultern, Brust, Rücken</p>
+  
+  <p><strong>Trainingshäufigkeit:</strong> 2–3× pro Woche</p>
+
+ 
+  <h4>2. Hauptteil (ca. 20 Min)</h4>
+  <p>Drei Zirkel – je 2–3 Runden, mit 30 Sek. Pause zwischen Übungen, 60–90 Sek. Pause zwischen den Zirkeln.</p>
+
+  <h5>Zirkel A – Rücken &amp; Bizeps</h5>
+  <ol class="uebungen-liste">
+    <li><strong>Einarmiges Rudern (je Seite):</strong> 3× 12</li>
+    <li><strong>Bizeps Hammer Curls:</strong> 3× 12</li>
+    <li><strong>„Brustschieber“:</strong> Hände gegeneinanderpressen und nach vorne „stechen“, 3× 15</li>
+  </ol>
+</section>
+
+<form id="purchaseForm" action="https://www.paypal.me/PhilippGanz/4.99" method="get" target="_blank" onsubmit="return validateForm()">
+  <label for="agbCheckbox">
+    <input type="checkbox" id="agbCheckbox" />
+    Ich akzeptiere die <a href="agb.html" target="_blank" rel="noopener noreferrer">AGB</a> und die <a href="widerrufsbelehrung.html" target="_blank" rel="noopener noreferrer">Widerrufsbelehrung</a>.
+  </label>
+
+  <button type="submit" id="buyButton" disabled>Kaufen für 4,99€</button>
+</form>
+
+<script>
+  const checkbox = document.getElementById('agbCheckbox');
+  const buyButton = document.getElementById('buyButton');
+
+  checkbox.addEventListener('change', function () {
+    if (this.checked) {
+      buyButton.disabled = false;
+      buyButton.classList.add('enabled');
+    } else {
+      buyButton.disabled = true;
+      buyButton.classList.remove('enabled');
+    }
+  });
+
+  function validateForm() {
+    if (!checkbox.checked) {
+      alert('Bitte akzeptiere die AGB und Widerrufsbelehrung, um fortzufahren.');
+      return false;
+    }
+    return true;
+  }
+</script>
+
+</body>
+</html>

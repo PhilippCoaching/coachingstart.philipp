@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ganzkörperaufwärmen – Coach Philipp</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<h1>Ganzkörperaufwärmen</h1>
+
+<p>Ein effektives Aufwärmprogramm, das den gesamten Körper vorbereitet und das Verletzungsrisiko beim Training minimiert.</p>
+
+<p>Geeignet für: Alle, die ihre Trainingseinheiten sicher und effektiv starten möchten.</p>
+
+<section class="trainingsplan-auszug">
+  <h2>Coach Philipp</h2>
+  <h3>Dein Start in ein fitteres Leben</h3>
+
+  <p><strong>2. Gelenkmobilisation (2–3 Minuten)</strong></p>
+  <p><em>Ziel:</em> Bewegungsfähigkeit der Gelenke verbessern, Verletzungen vorbeugen</p>
+  <p>→ Kann komplett im Stand oder Sitzen durchgeführt werden</p>
+
+  <p><strong>Empfohlene Übungen (je 5–10 Wiederholungen pro Seite):</strong></p>
+  <ol class="uebungen-liste">
+    <li>
+      <strong>Kopfkreisen &amp; Nicken</strong>
+      <p>Sanfte Mobilisation der Halswirbelsäule</p>
+    </li>
+    <li>
+      <strong>Armkreisen vorwärts/rückwärts</strong>
+      <p>Aufwärmen der Schultergelenke</p>
+    </li>
+    <li>
+      <strong>Schulterheben &amp; -kreisen</strong>
+      <p>Lockern des Schulter- und Nackenbereichs</p>
+    </li>
+    <li>
+      <strong>Rumpfrotation</strong>
+      <p>Im Stand oder Sitzen – aktiviert die Wirbelsäule</p>
+    </li>
+    <li>
+      <strong>Hüftkreisen / Beckenrollen</strong>
+      <p>Z. B. auf dem Gymnastikball – mobilisiert den unteren Rücken</p>
+    </li>
+    <li>
+      <strong>Beinschwingen</strong>
+      <p>Mit Stuhl oder Wand zur Unterstützung</p>
+    </li>
+    <li>
+      <strong>Fußgelenke kreisen</strong>
+      <p>Im Sitzen oder im Einbeinstand mit Festhalten</p>
+    </li>
+  </ol>
+
+  <p style="margin-top: 25px; font-style: italic; color: #9ccc65;">
+    Besonders gelenkschonend, für jedes Fitnesslevel geeignet.
+  </p>
+</section>
+
+<form id="purchaseForm" action="https://www.paypal.me/PhilippGanz/4.99" method="get" target="_blank" onsubmit="return validateForm()">
+  <label for="agbCheckbox">
+    <input type="checkbox" id="agbCheckbox" />
+    Ich akzeptiere die <a href="agb.html" target="_blank" rel="noopener noreferrer">AGB</a> und die <a href="widerrufsbelehrung.html" target="_blank" rel="noopener noreferrer">Widerrufsbelehrung</a>.
+  </label>
+
+  <button type="submit" id="buyButton" disabled>Kaufen für 4,99€</button>
+</form>
+
+<script>
+  const checkbox = document.getElementById('agbCheckbox');
+  const buyButton = document.getElementById('buyButton');
+
+  checkbox.addEventListener('change', function () {
+    if (this.checked) {
+      buyButton.disabled = false;
+      buyButton.classList.add('enabled');
+    } else {
+      buyButton.disabled = true;
+      buyButton.classList.remove('enabled');
+    }
+  });
+
+  function validateForm() {
+    if (!checkbox.checked) {
+      alert('Bitte akzeptiere die AGB und Widerrufsbelehrung, um fortzufahren.');
+      return false;
+    }
+    return true;
+  }
+</script>
+
+</body>
+</html>
