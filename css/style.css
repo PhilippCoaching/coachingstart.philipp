@@ -1,4 +1,6 @@
-/* Grunddesign - dunkel mit grünem Akzent */
+/* =====================
+   Grunddesign - dunkel mit grünem Akzent
+===================== */
 body {
   background: linear-gradient(135deg, #121212 0%, #1b381b 100%);
   color: #ddd;
@@ -8,18 +10,21 @@ body {
   line-height: 1.6;
 }
 
-
+/* Links */
 a {
   color: #28a745;
   text-decoration: none;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   color: #1e7e34;
   text-decoration: underline;
 }
 
-/* Buttons allgemein: grün, kleinere Schrift, runde Ecken */
+/* =====================
+   Buttons allgemein
+===================== */
 button,
 input[type="button"],
 input[type="submit"],
@@ -60,7 +65,7 @@ a.plan-btn:focus {
   box-shadow: 0 8px 16px rgba(0,0,0,0.5);
 }
 
-/* Zurück-Buttons: kleiner, gleiches Design */
+/* Zurück-Buttons */
 button.back-btn,
 a.back-btn {
   background-color: #28a745;
@@ -90,7 +95,52 @@ a.back-btn:focus {
   box-shadow: 0 6px 12px rgba(0,0,0,0.4);
 }
 
-/* Footer */
+/* =====================
+   Header & Logo
+===================== */
+header {
+  display: flex;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #1a1a1a;
+  border-bottom: 2px solid #28a745;
+  flex-wrap: wrap;
+}
+
+header img.logo {
+  height: 45px;
+  margin-right: 20px;
+}
+
+header h1 {
+  color: #28a745;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+  flex-grow: 1;
+}
+
+/* =====================
+   Hauptbereich
+===================== */
+main {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* =====================
+   Qualifikationen – B-Lizenz mittig
+===================== */
+.qualification {
+  text-align: center;
+  margin: 20px auto;
+  display: block;
+}
+
+/* =====================
+   Footer
+===================== */
 footer {
   background-color: #1a1a1a;
   color: #bbb;
@@ -111,58 +161,23 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Instagram Icon in Footer */
+/* Instagram Icon */
 footer a.insta-link svg {
   width: 20px;
   height: 20px;
-  fill: white; /* weiß */
+  fill: white;
   vertical-align: middle;
   transition: fill 0.25s ease;
 }
 
 footer a.insta-link:hover svg,
 footer a.insta-link:focus svg {
-  fill: #28a745; /* grün bei hover */
+  fill: #28a745;
 }
 
-/* Header & Logo */
-header {
-  display: flex;
-  align-items: center;
-  padding: 20px 40px;
-  background-color: #1a1a1a;
-  border-bottom: 2px solid #28a745;
-  flex-wrap: wrap;
-}
-
-header img.logo {
-  height: 45px; /* Logo Größe */
-  margin-right: 20px;
-}
-
-header h1 {
-  color: #28a745;
-  font-size: 2rem;
-  font-weight: 600;
-  margin: 0;
-  flex-grow: 1;
-}
-
-/* Hauptbereich */
-main {
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-/* Qualifikationen – B-Lizenz mittig */
-.qualification {
-  text-align: center;
-  margin: 20px auto;
-  display: block;
-}
-
-/* Responsive */
+/* =====================
+   Responsive
+===================== */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -206,17 +221,23 @@ main {
   }
 }
 
-/* FAQ-Bereich */
+/* =====================
+   FAQ-Bereich
+===================== */
 #faq {
   background-color: #111;
   color: #eee;
   padding: 40px 20px;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 0 auto 40px auto;
   border-radius: 12px;
 }
 
-/* Stil der Fragen-Buttons */
+.faq-item {
+  margin-bottom: 15px;
+  overflow: visible; /* Buttons nicht abgeschnitten */
+}
+
 .faq-question {
   width: 100%;
   text-align: left;
@@ -237,11 +258,10 @@ main {
   color: #fff;
 }
 
-/* Antwortfeld standardmäßig versteckt */
 .faq-answer {
   max-height: 0;
-  overflow: hidden;
   opacity: 0;
+  overflow: visible;
   transition: all 0.4s ease;
   background-color: #1b1b1b;
   padding: 0 20px;
@@ -249,20 +269,35 @@ main {
   border-radius: 0 0 8px 8px;
 }
 
-/* Sichtbar machen, wenn .active */
 .faq-item.active .faq-answer {
-  max-height: 300px; /* reicht für kurze Antworten */
+  max-height: 1000px;
   opacity: 1;
   padding: 15px 20px;
   margin-bottom: 20px;
 }
 
-/* Optional: glatte Übergänge */
-.faq-item {
-  margin-bottom: 10px;
+/* Button im FAQ Antwortbereich */
+.faq-answer .btn {
+  display: inline-block;
+  margin-top: 15px;
+  position: relative;
+  z-index: 1;
 }
 
-/* Trainingsplan-Auszug einheitlich gestalten wie Plan1 */
+/* Fortschrittstracking-Hinweis */
+.faq-answer .tracking-instructions {
+  background-color: #1e1e1e;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  border-left: 3px solid #9ccc65;
+}
+
+/* =====================
+   Trainingsplan-Auszug
+===================== */
 .trainingsplan-auszug {
   background-color: #1e1e1e;
   color: #ddd;
@@ -354,7 +389,10 @@ main {
   font-size: 1.2rem;
   user-select: none;
 }
-/* Weitere Responsive-Anpassungen für kleine Geräte */
+
+/* =====================
+   Responsive Trainingsplan
+===================== */
 @media (max-width: 600px) {
   .trainingsplan-auszug {
     padding: 20px;
