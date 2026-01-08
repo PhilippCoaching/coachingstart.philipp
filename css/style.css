@@ -209,7 +209,7 @@ main {
 #faq {
   background-color: #111;
   color: #eee;
-  padding: 40px 20px;
+  padding: 30px 20px;
   max-width: 800px;
   margin: 0 auto;
   border-radius: 12px;
@@ -227,7 +227,7 @@ main {
   font-weight: bold;
   border-radius: 8px;
   cursor: pointer;
-  margin-bottom: 10px;
+  margin-bottom: 6px; /* kleinerer Abstand */
   transition: background-color 0.3s;
 }
 
@@ -236,31 +236,22 @@ main {
   color: #fff;
 }
 
-/* Antwortfeld standardmäßig versteckt, max-height groß genug für Button */
+/* Antwortfeld standardmäßig versteckt */
 .faq-answer {
-  max-height: 2000px; /* ausreichend groß, damit nichts abgeschnitten wird */
-  overflow: visible; /* Button nicht abgeschnitten */
-  opacity: 0;
-  transition: all 0.4s ease;
+  display: none; /* vorher max-height + overflow */
   background-color: #1b1b1b;
-  padding: 0 20px;
+  padding: 12px 20px;
   border-left: 3px solid #28a745;
   border-radius: 0 0 8px 8px;
-  position: relative;
-  z-index: 1;
+  margin-bottom: 10px; /* Abstand zur nächsten Frage */
+  line-height: 1.5;
 }
 
 /* Sichtbar machen, wenn .active */
 .faq-item.active .faq-answer {
-  opacity: 1;
-  padding: 15px 20px;
-  margin-bottom: 20px;
+  display: block;
 }
 
-/* Optional: glatte Übergänge */
-.faq-item {
-  margin-bottom: 10px;
-}
 
 /* Trainingsplan-Auszug */
 .trainingsplan-auszug {
@@ -409,3 +400,4 @@ main {
     text-align: center;
   }
 }
+
