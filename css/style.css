@@ -8,6 +8,7 @@ body {
   line-height: 1.6;
 }
 
+/* Links */
 a {
   color: #28a745;
   text-decoration: none;
@@ -132,6 +133,7 @@ header {
   background-color: #1a1a1a;
   border-bottom: 2px solid #28a745;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 header img.logo {
@@ -145,6 +147,32 @@ header h1 {
   font-weight: 600;
   margin: 0;
   flex-grow: 1;
+}
+
+/* Navigation oben als Buttons */
+header nav {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+header nav a {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 20px;
+  background-color: transparent;
+  color: #28a745;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+header nav a:hover,
+header nav a:focus {
+  background-color: #28a745;
+  color: black;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.35);
 }
 
 /* Hauptbereich */
@@ -169,12 +197,8 @@ main {
   }
 
   header img.logo {
-    height: 20px;
+    height: 40px;
     margin-bottom: 10px;
-  }
-
-  header h1 {
-    font-size: 1.6rem;
   }
 
   main {
@@ -199,6 +223,16 @@ main {
     margin: 10px 10px 20px 0;
   }
 
+  header nav {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  header nav a {
+    padding: 8px 14px;
+    font-size: 0.95rem;
+  }
+
   footer a.insta-link svg {
     width: 18px;
     height: 18px;
@@ -209,7 +243,7 @@ main {
 #faq {
   background-color: #111;
   color: #eee;
-  padding: 30px 20px;
+  padding: 40px 20px;
   max-width: 800px;
   margin: 0 auto;
   border-radius: 12px;
@@ -227,7 +261,7 @@ main {
   font-weight: bold;
   border-radius: 8px;
   cursor: pointer;
-  margin-bottom: 6px; /* kleinerer Abstand */
+  margin-bottom: 10px;
   transition: background-color 0.3s;
 }
 
@@ -238,22 +272,30 @@ main {
 
 /* Antwortfeld standardmäßig versteckt */
 .faq-answer {
-  display: none; /* vorher max-height + overflow */
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
   background-color: #1b1b1b;
-  padding: 12px 20px;
+  padding: 0 20px;
   border-left: 3px solid #28a745;
   border-radius: 0 0 8px 8px;
-  margin-bottom: 10px; /* Abstand zur nächsten Frage */
-  line-height: 1.5;
 }
 
 /* Sichtbar machen, wenn .active */
 .faq-item.active .faq-answer {
-  display: block;
+  max-height: 300px; /* reicht für kurze Antworten */
+  opacity: 1;
+  padding: 15px 20px;
+  margin-bottom: 15px;
 }
 
+/* FAQ Item Abstände */
+.faq-item {
+  margin-bottom: 8px;
+}
 
-/* Trainingsplan-Auszug */
+/* Trainingsplan-Auszug einheitlich gestalten */
 .trainingsplan-auszug {
   background-color: #1e1e1e;
   color: #ddd;
@@ -262,7 +304,6 @@ main {
   padding: 30px 40px;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.6);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
 }
 
@@ -346,7 +387,7 @@ main {
   user-select: none;
 }
 
-/* Responsive Trainingsplan */
+/* Responsive für kleine Geräte */
 @media (max-width: 600px) {
   .trainingsplan-auszug {
     padding: 20px;
@@ -400,4 +441,3 @@ main {
     text-align: center;
   }
 }
-
